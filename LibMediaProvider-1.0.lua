@@ -1,8 +1,15 @@
 --LibMediaProvider-1.0 is inspired by and borrows from LibSharedMedia-3.0 for World of Warcraft by Elkano
 --LibSharedMedia-3.0 and LibMediaProvider-1.0 are under the LGPL-2.1 license
  
-local libName, libVersion = "LibMediaProvider-1.0", 14
-LMP = {}
+--Register LMP with LibStub
+local MAJOR, MINOR = "LibMediaProvider-1.0", 13
+local LMP, oldminor
+if LibStub then
+    LMP, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
+else
+    LMP = {}
+end
+if not LMP then return end --the same or newer version of this lib is already loaded into memory
 LibMediaProvider = LMP
 
 local cm = CALLBACK_MANAGER
@@ -101,10 +108,10 @@ end
 
 function LMP:Register(mediatype, key, data)
 	if type(mediatype) ~= "string" then
-		error(libName..":Register(mediatype, key, data) - mediatype must be string, got "..type(mediatype))
+		error(MAJOR..":Register(mediatype, key, data) - mediatype must be string, got "..type(mediatype))
 	end
 	if type(key) ~= "string" then
-		error(libName..":Register(mediatype, key, data) - key must be string, got "..type(key))
+		error(MAJOR..":Register(mediatype, key, data) - key must be string, got "..type(key))
 	end
 	mediatype = mediatype:lower()
 	if not mediaTable[mediatype] then
