@@ -1,6 +1,6 @@
 --LibMediaProvider-1.0 is inspired by and borrows from LibSharedMedia-3.0 for World of Warcraft by Elkano
 --LibSharedMedia-3.0 and LibMediaProvider-1.0 are under the LGPL-2.1 license
- 
+
 --Register LMP with LibStub
 local MAJOR, MINOR = "LibMediaProvider-1.0", 13
 local LMP, oldminor
@@ -58,16 +58,16 @@ LMP.DefaultMedia.border = "ESO Gold"
 
 -- FONT
 LMP.MediaTable.font = LMP.MediaTable.font or {}
-LMP.MediaTable.font["ProseAntique"]				= "EsoUI/Common/Fonts/ProseAntiquePSMT.otf"
-LMP.MediaTable.font["Consolas"]					= "EsoUI/Common/Fonts/consola.ttf"
-LMP.MediaTable.font["Futura Condensed"]			= "EsoUI/Common/Fonts/FTN57.otf"
-LMP.MediaTable.font["Futura Condensed Bold"]	= "EsoUI/Common/Fonts/FTN87.otf"
-LMP.MediaTable.font["Futura Condensed Light"]	= "EsoUI/Common/Fonts/FTN47.otf"
-LMP.MediaTable.font["Skyrim Handwritten"]		= "EsoUI/Common/Fonts/Handwritten_Bold.otf"
-LMP.MediaTable.font["Trajan Pro"]				= "EsoUI/Common/Fonts/trajanpro-regular.otf"
-LMP.MediaTable.font["Univers 55"]				= "EsoUI/Common/Fonts/univers55.otf"
-LMP.MediaTable.font["Univers 57"]				= "EsoUI/Common/Fonts/univers57.otf"
-LMP.MediaTable.font["Univers 67"]				= "EsoUI/Common/Fonts/univers67.otf"
+LMP.MediaTable.font["ProseAntique"]				= "$(PROSE_ANTIQUE_FONT)"		-- "EsoUI/Common/Fonts/ProseAntiquePSMT.otf"
+LMP.MediaTable.font["Consolas"]					= "$(CONSOLAS_FONT)"			-- "EsoUI/Common/Fonts/consola.ttf"
+LMP.MediaTable.font["Futura Condensed"]			= "$(FTN57_FONT)"				-- "EsoUI/Common/Fonts/FTN57.otf"
+LMP.MediaTable.font["Futura Condensed Bold"]	= "$(FTN87_FONT)"				-- "EsoUI/Common/Fonts/FTN87.otf"
+LMP.MediaTable.font["Futura Condensed Light"]	= "$(FTN47_FONT)"				-- "EsoUI/Common/Fonts/FTN47.otf"
+LMP.MediaTable.font["Skyrim Handwritten"]		= "$(HANDWRITTEN_BOLD_FONT)"	-- "EsoUI/Common/Fonts/Handwritten_Bold.otf"
+LMP.MediaTable.font["Trajan Pro"]				= "$(TRAJAN_PRO_R_FONT)"		-- "EsoUI/Common/Fonts/trajanpro-regular.otf"
+LMP.MediaTable.font["Univers 55"]				= "$(UNIVERS55_FONT)"			-- "EsoUI/Common/Fonts/univers55.otf"
+LMP.MediaTable.font["Univers 57"]				= "$(UNIVERS57_FONT)"			-- "EsoUI/Common/Fonts/univers57.otf"
+LMP.MediaTable.font["Univers 67"]				= "$(UNIVERS67_FONT)"			-- "EsoUI/Common/Fonts/univers67.otf"
 LMP.DefaultMedia.font = "Univers 55"
 
 -- STATUSBAR
